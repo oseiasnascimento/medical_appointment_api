@@ -1,3 +1,4 @@
+import { ParameterRequiredError } from './../../errors/parameter-required.error'
 import { User } from '../../entities/user.entity'
 import { UserRepository } from './../../repositories/user.repository'
 type UserRequest = {
@@ -12,7 +13,7 @@ export class CreateUserUseCase {
     const user = User.create(data)
 
     if (!data.username || !data.password) {
-      throw new Error('Username and password is required')
+      throw new ParameterRequiredError('Username and password is required', 422)
     }
 
     const existUser = await userRepository.findByUsername(data.username)
