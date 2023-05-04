@@ -1,9 +1,7 @@
-import { CreateUserController } from './../useCases/create-user/create-user.controller';
+import { createUserController } from '../modules/users/useCases/create-user';
 import { Router } from 'express'
 
 const userRouter = Router()
-
-const createUserController = new CreateUserController()
 
 userRouter.post("/users", createUserController.handle)
 
