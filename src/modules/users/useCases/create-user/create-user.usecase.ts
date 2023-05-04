@@ -1,6 +1,6 @@
 import { ParameterRequiredError } from '../../../../errors/parameter-required.error'
 import { User } from '../../entities/user.entity'
-import { UserRepository } from '../../../../repositories/user.repository'
+import { UserRepository } from '../../repositories/implementations/user.repository'
 type UserRequest = {
   name: string
   username: string
