@@ -1,19 +1,19 @@
 import { User } from '../../entities/user.entity'
 
-export class UserRepository {
+export class UserMemoryRepository {
   users: User[]
 
-  private static instance: UserRepository
+  private static instance: UserMemoryRepository
 
   constructor() {
     this.users = []
   }
 
   static getInstance() {
-    if (!UserRepository.instance) {
-      UserRepository.instance = new UserRepository()
+    if (!UserMemoryRepository.instance) {
+      UserMemoryRepository.instance = new UserMemoryRepository()
     }
-    return UserRepository.instance
+    return UserMemoryRepository.instance
   }
 
   async findByUsername(username: string) {
