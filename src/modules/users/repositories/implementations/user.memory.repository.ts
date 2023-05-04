@@ -1,6 +1,7 @@
 import { User } from '../../entities/user.entity'
+import { IUserRepository } from '../user.repository'
 
-export class UserMemoryRepository {
+export class UserMemoryRepository implements IUserRepository{
   users: User[]
 
   private static instance: UserMemoryRepository
