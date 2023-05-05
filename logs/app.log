@@ -6,3 +6,4 @@
 {"level":"info","message":"User begin created","timestamp":"04/05/2023 15:34:08"}
 {"level":"info","message":"User begin created","timestamp":"05/05/2023 10:19:09"}
 {"level":"error","message":"USER_EXISTS_ERROR: Username already exists\n    at CreateUserUseCase.execute (c:\\Users\\Oseias Saboia\\documents\\github\\medical_appointment\\src\\modules\\users\\useCases\\create-user\\create-user.usecase.ts:25:13)\n    at CreateUserController.handle (c:\\Users\\Oseias Saboia\\documents\\github\\medical_appointment\\src\\modules\\users\\useCases\\create-user\\create-user.controller.ts:15:22)\n    at <anonymous> (c:\\Users\\Oseias Saboia\\documents\\github\\medical_appointment\\src\\routes\\user.routes.ts:7:3)","timestamp":"05/05/2023 10:19:09"}
+{"level":"info","message":"User begin created","timestamp":"05/05/2023 14:42:42"}
