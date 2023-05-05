@@ -3,6 +3,8 @@ import { Router } from 'express'
 
 const userRouter = Router()
 
-userRouter.post("/users", createUserController.handle)
+userRouter.post("/users", async (req, res) => {
+  await createUserController.handle(req, res)
+})
 
 export { userRouter } 
