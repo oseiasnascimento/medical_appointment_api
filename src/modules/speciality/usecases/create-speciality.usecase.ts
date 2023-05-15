@@ -11,5 +11,9 @@ export class CreateSpecialtyUseCase {
 
   async execute(data: SpecialtyRequest) {
     const speciality = new Speciality(data)
+
+    const specialityCreated = await this.specialtyRepository.save(speciality)
+
+    return specialityCreated
   }
 }
