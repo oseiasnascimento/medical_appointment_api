@@ -1,5 +1,5 @@
-import { Speciality } from '../entities/speciality.entity'
-import { ISpecialityRepository } from '../repositories/speciality.repository'
+import { Speciality } from '../../entities/speciality.entity'
+import { ISpecialityRepository } from '../../repositories/speciality.repository'
 
 type SpecialtyRequest = {
   name: string

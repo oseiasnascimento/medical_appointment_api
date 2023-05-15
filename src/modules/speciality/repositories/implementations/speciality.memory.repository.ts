@@ -17,7 +17,7 @@ export class SpecialityMemoryRepository implements ISpecialityRepository{
     return SpecialityMemoryRepository.instance
   }
 
-  async findByUsername(name: string) {
+  async findByName(name: string) {
     return this.speciality.find(speciality => speciality.name === name)
   }
 
