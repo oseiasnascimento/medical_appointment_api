@@ -14,12 +14,15 @@ export class Specialty {
   constructor({ name, description }: ISpecialty) {
     this.name = name
     this.description = description
-    this.createdAt = new Date
+    this.createdAt = new Date()
     this.id = randomUUID()
   }
-  
-  static create(prosp: ISpecialty){
-    const specialty = new Specialty(prosp)
+
+  static create(props: ISpecialty) {
+    if(!props.name){
+      throw new Error('Specialty must have a name')
+    }
+    const specialty = new Specialty(props)
     return specialty
   }
 }
