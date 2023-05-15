@@ -1,5 +1,6 @@
 import express from 'express'
 import { userRouter } from './routes/user.routes'
+import { specialityRouter } from './routes/speciality.routes'
 
 const app = express()
 
@@ -9,6 +10,7 @@ const port = 3333
 app.use(express.json())
 
 app.use(userRouter)
+app.use(specialityRouter)
 
 app.get('/', (req, res) => {
   return res.send('Hello World')

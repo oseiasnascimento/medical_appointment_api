@@ -6,7 +6,7 @@ type SpecialtyRequest = {
   description: string
 }
 
-export class CreateSpecialtyUseCase {
+export class CreateSpecialityUseCase {
   constructor(private specialtyRepository: ISpecialityRepository) {}
 
   async execute(data: SpecialtyRequest) {
