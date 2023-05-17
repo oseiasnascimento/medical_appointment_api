@@ -2,6 +2,9 @@ import express from 'express'
 import { userRouter } from './routes/user.routes'
 import { specialityRouter } from './routes/speciality.routes'
 
+import swaggerUi from 'swagger-ui-express'
+import swaggerDocument from '../swagger.json'
+
 const app = express()
 
 const hostname = '127.0.0.1'
