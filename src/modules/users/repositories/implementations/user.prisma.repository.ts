@@ -16,7 +16,8 @@ export class UserPrismaRepository implements IUserRepository {
       data: {
         name: data.name,
         password: data.password,
-        username: data.username
+        username: data.username,
+        id: data.id
       }
     })
 
