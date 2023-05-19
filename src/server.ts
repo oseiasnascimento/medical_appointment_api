@@ -12,6 +12,8 @@ const port = 3333
 
 app.use(express.json())
 
+app.use("/docs",swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+
 app.use(userRouter)
 app.use(specialityRouter)
 
