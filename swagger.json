@@ -1,0 +1,8 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Scheduling service",
+    "description": "API responsible for scheduling medical appointments",
+    "version": "1.0.0"
+  }
+}
