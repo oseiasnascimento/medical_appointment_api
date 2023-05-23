@@ -3,6 +3,24 @@
   "info": {
     "title": "Scheduling service",
     "description": "API responsible for scheduling medical appointments",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "apiteam@swagger.io"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "paths": {
+    "/users": {
+
+    },
+    "/specialities": {
+      "post": {
+        "description":"registration of specialities"
+      }
+    }
   }
 }
