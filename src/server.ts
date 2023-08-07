@@ -7,7 +7,7 @@ import swaggerDocument from '../swagger.json'
 
 const app = express()
 
-const hostname = '127.0.0.1'
+const hostname = 'localhost'//'127.0.0.1'
 const port = 3333
 
 app.use(express.json())

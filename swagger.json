@@ -14,12 +14,81 @@
     }
   },
   "paths": {
-    "/users": {
-
-    },
+    "/users": {},
     "/specialities": {
       "post": {
-        "description":"registration of specialities"
+        "tags": [
+          "Speciality"
+        ],
+        "description": "registration of specialities",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SpecialityRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200":{
+            "content": {
+              "application/json":{
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialityResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "SpecialityRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name speciality",
+            "example": "NAME_SPECIALITY"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description speciality",
+            "example": "DESCRIPTION_SPECIALITY"
+          }
+        },
+        "required": [
+          "name",
+          "description"
+        ]
+      },
+      "SpecialityResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID speciality",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name speciality",
+            "example": "NAME_SPECIALITY"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description speciality",
+            "example": "DESCRIPTION_SPECIALITY"
+          },
+          "createdAt": {
+            "type": "string",
+            "description": "Create data speciality",
+            "format": "datetime"
+          }
+        }
       }
     }
   }
