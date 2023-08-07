@@ -1,5 +1,6 @@
 import { IUserRepository } from './../../repositories/user.repository';
 import { CustomError } from './../../../../errors/custom.error';
+import { IPasswordCrypto } from '../../../../infra/shared/crypto/password.crypto';
 
 type AuthenticateRequest ={
   username: string,
@@ -8,7 +9,10 @@ type AuthenticateRequest ={
 
 export class AuthenticateUserCase{
 
-  constructor( private userRepository: IUserRepository){
+  constructor( 
+    private userRepository: IUserRepository, 
+    private passwordCrypto: IPasswordCrypto
+  ){
 
   }
 
@@ -22,5 +26,13 @@ export class AuthenticateUserCase{
     if (!user){
       throw new CustomError("Invalid username or password", 401)
     }
+
+    const comparePasswordEquals = await this.passwordCrypto.comparePassword(password, user.password)
+
+    if (!comparePasswordEquals){
+      throw new CustomError("Invalid username or password", 401)
+    }
+
+    return user
   }
 }
