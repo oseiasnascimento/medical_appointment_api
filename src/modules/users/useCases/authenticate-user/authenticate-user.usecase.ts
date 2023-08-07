@@ -12,9 +12,7 @@ export class AuthenticateUserCase{
   constructor( 
     private userRepository: IUserRepository, 
     private passwordCrypto: IPasswordCrypto
-  ){
-
-  }
+  ){}
 
   async execute({username, password}: AuthenticateRequest){
     if (!username || !password){
